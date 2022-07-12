@@ -143,7 +143,26 @@ h3 {
 }
 
 /* components */
+.grid-col-span-2{
+  grid-column: span 2;
+}
+.testimonial:last-child{
+  grid-column: 4;
+  /* grid-row-start: 1;
+  grid-row-end: 3; */
+  grid-row: 1/3
+}
 .testimonial-grid {
+  /* grid practice starts here */
+  display: grid;
+  gap: 1.5rem;
+  /* using the fr unit, it means each grid element will take equal fraction of space and */
+  /* the repeat function will takes two parameters, the number of repetition and what we wanna repear*/
+
+  grid-template-columns: repeat(4, 1fr);
+
+  /* grid practise ends here */
+
   padding-block: 2rem;
   width: min(95%, 70rem);
   margin-inline: auto;
